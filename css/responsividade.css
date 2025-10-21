@@ -25,6 +25,28 @@
 
 @media screen and (min-width: 1024px)
 {
+	header
+	{
+		bottom: unset;
+		top: 0px;
+
+		nav ul
+		{
+			justify-content: center;
+			gap: 24px;
+			
+			li
+			{
+				font-size: 1.1em;
+				
+				a img
+				{
+					display: none;
+				}
+			}
+		}
+	}
+
 	footer
 	{
 		display: grid;
@@ -32,6 +54,7 @@
 		justify-items: center;
 		justify-content: center;
 		column-gap: 64px;
+		padding-bottom: 64px;
 
 		#creditos
 		{
