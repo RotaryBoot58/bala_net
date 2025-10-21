@@ -62,6 +62,25 @@ header
 /* 	align-items: center; */
 	user-select: none;
 
+	nav ul
+	{
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	nav ul li
+	{
+		background: red;
+		
+		img
+		{
+			display: block;
+			margin: auto;
+			height: 48px;
+			width: 48px;
+		}
+	}
+
 /* 	img */
 /* 	{ */
 /* 		height: 64px; */
