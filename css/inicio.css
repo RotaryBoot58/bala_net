@@ -1,0 +1,204 @@
+main section:not(#inicio)
+{
+	height: calc(100vh - 76px);
+	scroll-margin-top: 76px;
+	padding: 32px 256px;
+
+	{
+		h2
+		{
+			text-align: center;
+			margin-top: unset;
+			/* margin-bottom: 32px; */
+		}
+	}
+}
+
+#inicio
+{
+	height: 100vh;
+	padding: 0 64px;
+	position: relative;
+	display: grid;
+	grid-template-columns: min-content auto min-content;
+	align-items: center;
+
+	video
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		z-index: -1;
+	}
+
+	button
+	{
+		height: 48px;
+		width: 48px;
+		border-radius: 100%;
+		border: unset;
+		background-color: green;
+	}
+
+	ul
+	{
+		display: flex;
+		scroll-snap-type: x mandatory;
+		overflow-x: hidden;
+
+		li
+		{
+			scroll-snap-align: center;
+			flex: 0 0 100%;
+			padding: 0 128px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			place-items: center;
+
+			span
+			{
+				color: green;
+				font-weight: bold;
+				font-size: 1.5em;
+			}
+
+			h1, h2
+			{
+				margin: 0;
+				margin-top: 0.25em;
+				margin-bottom: 0.5em;
+				font-size: 2em;
+			}
+
+			p
+			{
+				margin: unset;
+			}
+
+			a
+			{
+				margin-top: 24px;
+				display: block;
+			}
+
+			img
+			{
+				
+			}
+		}
+	}
+}
+
+#planos > div
+{
+	display: flex;
+	justify-content: space-around;
+
+	.plano
+	{
+		width: 384px;
+		padding: 12px;
+		text-align: center;
+
+		.preco
+		{
+			border-radius: 6p
+			text-align: center;
+			padding: 16px 0;
+			border: 1px solid blue;
+			font-size: 1.1em;
+		}
+
+		ul li
+		{
+			text-align: left;
+		}
+
+		button
+		{
+			background: unset;
+		}
+	}
+}
+
+#servicos
+{
+	
+}
+
+#empresa
+{
+	
+}
+
+#atendimento
+{
+	
+}
+
+#perguntas-frequentes
+{
+	
+}
+
+#area-cliente
+{
+	
+}
+
+/* 	#atendimento */
+/* 	{ */
+/* 		display: grid; */
+/* 		grid-template-columns: 1fr 1fr; */
+/*  */
+/* 		h2, & > p */
+/* 		{ */
+/* 			grid-column: span 2; */
+/* 			text-align: center; */
+/* 		} */
+/*  */
+/* 		form, & > div */
+/* 		{ */
+/* 			background: yellow; */
+/* 			padding: 12px; */
+/* 		} */
+/*  */
+/* 		form */
+/* 		{ */
+/* 			background: green; */
+/* 			display: grid; */
+/* 			grid-template-columns: 1fr 1fr; */
+/*  */
+/* 			h3 */
+/* 			{ */
+/* 				grid-column: span 2; */
+/* 			} */
+/*  */
+/* 			input */
+/* 			{ */
+/* 				display: block; */
+/* 			} */
+/*  */
+/* 			#caixa-mensagem */
+/* 			{ */
+/* 				grid-column: span 2; */
+/* 			} */
+/* 		} */
+/*  */
+/* 		.contato */
+/* 		{ */
+/* 			display: grid; */
+/* 			grid-template-columns: 48px auto 64px; */
+/* 			background: red; */
+/* 			 */
+/* 			img */
+/* 			{ */
+/* 				height: 48px; */
+/* 				width: 48px; */
+/* 			} */
+/* 		} */
+/* 	} */
+}

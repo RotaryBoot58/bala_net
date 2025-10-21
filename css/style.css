@@ -1,0 +1,110 @@
+*
+{
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body
+{
+	margin: unset;
+	background-color: #000000;
+}
+
+ul
+{
+	margin: unset;
+	padding: unset;
+	list-style-type: none;
+}
+
+a, p, h1, h2, h3, li, button
+{
+	color: #f1f1f1;
+}
+
+p
+{
+	margin: unset;
+}
+
+img
+{
+	vertical-align: middle;
+}
+
+button
+{
+	cursor: pointer;
+}
+
+a
+{
+	text-decoration-color: #f1f1f100;
+	transition-property: text-decoration-color;
+	transition-duration: 0.3s;
+
+	&:hover
+	{
+		text-decoration-color: #f1f1f1ff;
+	}
+}
+
+header
+{
+	height: 76px;
+	width: 100vw;
+	position: fixed;
+	bottom: 0px;
+	background: green;
+/* 	top: 0px; */
+/* 	display: flex; */
+/* 	justify-content: center; */
+/* 	align-items: center; */
+	user-select: none;
+
+/* 	img */
+/* 	{ */
+/* 		height: 64px; */
+/* 		width: 64px; */
+/* 	} */
+/*  */
+/* 	nav ul li */
+/* 	{ */
+/* 		display: inline; */
+/* 		margin: 0 12px; */
+/* 		font-size: 1.1em; */
+/* 	} */
+}
+
+footer
+{
+	padding: 0 16px;
+	padding-top: 32px;
+	padding-bottom: 64px;
+
+	section
+	{
+		margin-bottom: 24px;
+
+		&:first-of-type p
+		{
+			margin: 1em 0;
+		}
+
+		h2
+		{
+			margin-top: unset;
+		}
+
+		img
+		{
+			height: 48px;
+			width: 48px;
+		}
+	}
+
+	#creditos a
+	{
+		font-weight: bold;
+	}
+}

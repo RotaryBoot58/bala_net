@@ -1,0 +1,59 @@
+/* Telefones pequenos */
+/* @media only screen and (max-width: 600px) */
+/* {} */
+
+/* Telefones grandes, tablets e etc */
+/* @media only screen and (min-width: 600px) */
+/* {} */
+
+@media screen and (min-width: 1440px)
+{
+	footer
+	{
+		/* padding: 0 256pxpx; */
+	}
+}
+
+@media screen and (min-width: 1220px)
+{
+
+	footer
+	{
+		/* padding: 0 64px; */
+	}
+}
+
+@media screen and (min-width: 1024px)
+{
+	footer
+	{
+		display: grid;
+		grid-template-columns: 384px max-content max-content;
+		justify-items: center;
+		justify-content: center;
+		column-gap: 64px;
+
+		#creditos
+		{
+			grid-column: span 3;
+		}
+	}
+}
+
+@media screen and (min-width: 768px)
+{
+	footer
+	{}
+}
+
+@media screen and (min-width: 600px)
+{
+	footer
+	{}
+}
+
+@media screen and (max-width: 600px)
+{
+	footer
+	{}
+}
