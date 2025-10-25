@@ -5,8 +5,8 @@
 
 main section:not(#inicio)
 {
-	height: calc(100vh);
-	padding: 32px 256px;
+	min-height: calc(100vh);
+	padding: 48px 0;
 
 	h2
 	{
@@ -76,8 +76,6 @@ main section:not(#inicio)
 			a
 			{
 				background: red;
-				padding: 12px;
-				border-radius: 25px;
 			}
 			
 			img
@@ -91,55 +89,52 @@ main section:not(#inicio)
 
 #planos
 {
-	background: blue;
-}
-		/* li */
-		/* 	padding: 0 128px; */
-		/* 	display: grid; */
-		/* 	grid-template-columns: 1fr 1fr; */
-		/* 	place-items: center; */
-		/* 	span */
-		/* 		color: green; */
-		/* 		font-weight: bold; */
-		/* 		font-size: 1.5em; */
-		/* 	h1, h2 */
-		/* 		margin: 0; */
-		/* 		margin-top: 0.25em; */
-		/* 		margin-bottom: 0.5em; */
-		/* 		font-size: 2em; */
-		/* 	p */
-		/* 		margin: unset; */
-		/* 	a */
-		/* 		margin-top: 24px; */
-		/* 		display: block; */
-#teste/* #planos > div */
-{
-	display: flex;
-	justify-content: space-around;
-
-	.plano
+	ul li
 	{
-		width: 384px;
-		padding: 12px;
+		/* width: 384px; */
+		padding: 16px;
 		text-align: center;
+
+		h3
+		{
+			margin-top: unset;
+			margin-bottom: 0.5em;
+		}
 
 		.preco
 		{
-			border-radius: 6p
-			text-align: center;
-			padding: 16px 0;
-			border: 1px solid blue;
-			font-size: 1.1em;
+			background: green;
+			font-size: 1.3em;
+			border-radius: 25px;
+			padding: 16px;
+			width: max-content;
+			margin: 12px auto;
 		}
 
-		ul li
+		h4
 		{
-			text-align: left;
+			margin: unset;
 		}
 
-		button
+		ul
 		{
-			background: unset;
+			margin-left: 16px;
+
+			li
+			{
+				list-style-type: disc;
+				text-align: left;
+				padding: 0;
+			}
+		}
+
+		a
+		{
+			display: block;
+			background: red;
+			margin: 12px auto;
+			margin-bottom: 0;
+			width: max-content;
 		}
 	}
 }
@@ -167,58 +162,4 @@ main section:not(#inicio)
 #area-cliente
 {
 	
-}
-
-/* 	#atendimento */
-/* 	{ */
-/* 		display: grid; */
-/* 		grid-template-columns: 1fr 1fr; */
-/*  */
-/* 		h2, & > p */
-/* 		{ */
-/* 			grid-column: span 2; */
-/* 			text-align: center; */
-/* 		} */
-/*  */
-/* 		form, & > div */
-/* 		{ */
-/* 			background: yellow; */
-/* 			padding: 12px; */
-/* 		} */
-/*  */
-/* 		form */
-/* 		{ */
-/* 			background: green; */
-/* 			display: grid; */
-/* 			grid-template-columns: 1fr 1fr; */
-/*  */
-/* 			h3 */
-/* 			{ */
-/* 				grid-column: span 2; */
-/* 			} */
-/*  */
-/* 			input */
-/* 			{ */
-/* 				display: block; */
-/* 			} */
-/*  */
-/* 			#caixa-mensagem */
-/* 			{ */
-/* 				grid-column: span 2; */
-/* 			} */
-/* 		} */
-/*  */
-/* 		.contato */
-/* 		{ */
-/* 			display: grid; */
-/* 			grid-template-columns: 48px auto 64px; */
-/* 			background: red; */
-/* 			 */
-/* 			img */
-/* 			{ */
-/* 				height: 48px; */
-/* 				width: 48px; */
-/* 			} */
-/* 		} */
-/* 	} */
 }
