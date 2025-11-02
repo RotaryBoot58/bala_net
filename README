@@ -1,1 +1,6 @@
-### Bala Net
+# Bala Net
+Site do provedor de internet Bala Net
+
+# Branches
+master: branch de desenvolvimento, é aqui onde tudo é feito.
+pages: branch contendo a pré-visualização do site, normalmente contido dentro da pasta 'src'
