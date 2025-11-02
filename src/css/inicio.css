@@ -38,7 +38,7 @@ main section:not(#inicio)
 		position: absolute;
 		left: 0px;
 		top: 0px;
-		filter: brightness(50%);
+		filter: brightness(60%);
 		z-index: -1;
 	}
 
@@ -80,13 +80,14 @@ main section:not(#inicio)
 
 			a
 			{
-				background: red;
+				background: green;
 			}
 			
 			img
 			{
-				height: 64px;
-				width: 64px;
+				height: auto;
+				width: 256px;
+				transform: scaleX(-1);
 			}
 		}
 	}
@@ -94,11 +95,19 @@ main section:not(#inicio)
 
 #planos
 {
-	ul li
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/bg2.jxl");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	> ul > li
 	{
-		/* width: 384px; */
+		width: 384px;
 		padding: 16px;
 		text-align: center;
+		margin: 24px auto;
+		border-radius: 25px;
+		border: 2px solid green;
 
 		h3
 		{
