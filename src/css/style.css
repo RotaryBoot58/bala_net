@@ -62,8 +62,9 @@ a
 	padding: 12px;
 }
 
-header
+nav
 {
+	background-color: #000000dd;
 	height: 76px;
 	width: 100vw;
 	position: fixed;
@@ -71,7 +72,7 @@ header
 	user-select: none;
 	z-index: 1;
 
-	nav ul
+	ul
 	{
 		height: 100%;
 		display: flex;
@@ -93,6 +94,12 @@ footer
 	padding: 16px;
 	padding-top: 32px;
 	padding-bottom: 120px;
+	background-color: #2A7B9B;
+	background: linear-gradient(
+		329deg,
+		#397f55 12%,
+		#1b4e63 89%
+	);
 
 	section
 	{
