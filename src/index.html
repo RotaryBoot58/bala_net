@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Bala Net</title>
@@ -46,48 +47,41 @@
 		<main>
 			<section id="inicio">
 				<video autoplay loop muted preload="auto">
-					<source src="./assets/bg.webm" type="video/webm">
+					<source src="./assets/wallpaper/inicio.webm" type="video/webm">
 				</video>
 				
-				<button id="voltar"><</button>
+				<button class="botao-navegacao" data-action="voltar"><</button>
 				
 				<ul>
 					<li>
-						<span class="hashtag">#VemPraBalaNet</span>
+						<p class="hashtag">#VemPraBalaNet</p>
 						<h1>Bala Net, internet mais rápida que uma bala!</h1>
-						<p>Internet de alta velocidade e qualidade.</p>
-						<a href="#servicos" class="botao">Nossos serviços</a>
+						<p>Perfeita para jogar e assistir filmes sem interrupções.</p>
+						<button class="botao-section botao" data-section="planos">Ver planos</button>
 						<img src="https://cdn.creazilla.com/cliparts/3168612/ammunition-clipart-xl.png" alt="alt">
 					</li>
 					<li>
-						<span class="hashtag">#Indicação</span>
+						<p class="hashtag">#Indicação</p>
 						<h2>Indique e ganhe!</h2>
 						<p>Indique um amigo e ganhe desconto na sua mensalidade. Conectividade que se multiplica!</p>
-						<a href="#servicos" class="botao">Indicar</a>
+						<button class="botao-section botao" data-section="indicacao">Indicar</button>
 						<img src="https://cdn.creazilla.com/cliparts/3168612/ammunition-clipart-xl.png" alt="">
 					</li>
 					<li>
-						<span class="hashtag">#SuaEmpresa</span>
+						<p class="hashtag">#SuaEmpresa</p>
 						<h2>Soluções corporativas confiáveis e estáveis!</h2>
 						<p>Internet dedicada e serviços especializados para sua empresa.</p>
-						<a href="#planos" class="botao">Ver planos empresariais</a>
-						<img src="https://cdn.creazilla.com/cliparts/3168612/ammunition-clipart-xl.png" alt="">
-					</li>
-					<li>
-						<span class="hashtag">#DiversãoSemFim</span>
-						<h2>Internet Estável e sem travamentos!</h2>
-						<p>Perfeita para jogar e assistir filmes sem interrupções.</p>
-						<a href="#planos" class="botao">Ver planos</a>
+						<button class="botao-section botao" data-section="planos-empresariais">Ver planos empresariais</button>
 						<img src="https://cdn.creazilla.com/cliparts/3168612/ammunition-clipart-xl.png" alt="">
 					</li>
 				</ul>
 				
-				<button id="avancar">></button>
+				<button class="botao-navegacao" data-action="avancar">></button>
 			</section>
 
 			<section id="planos">
 				<h2>Confira nossos principais planos de internet</h2>
-				<ul>
+				<ul class="lista-planos">
 					<li>
 						<h3>100Mbp/s - Básico</h3>
 						<p>Conexão básica para quem só quer navegar.</p>
@@ -123,8 +117,8 @@
 					</li>
 				</ul>
 
-				<h2>Planos empresariais</h2>
-				<ul>
+				<h2 id="planos-empresariais">Planos empresariais</h2>
+				<ul class="lista-planos">
 					<li>
 						<h3>250Mbps/s - Pequeno</h3>
 						<p>Para pequenas empresas.</p>
@@ -202,65 +196,63 @@
 			<!-- 	</ul> -->
 			<!-- </section> -->
 			
-			<!-- <section id="atendimento"> -->
-				<!-- <h2>Entre em contato</h2> -->
-				<!-- <p>Estamos aqui para ajudar você a escolher o melhor plano ou tirar tuas dúvidas.</p> -->
-				<!-- <ul> -->
-				<!-- 	<li> -->
-				<!-- 		<img src="./assets/email.svg" alt="Ícone de email"> -->
-				<!-- 		<div> -->
-				<!-- 			<p>Email:</p> -->
-				<!-- 			<p>atendimento@balanet.com.br</p> -->
-				<!-- 		</div> -->
-				<!-- 		<a href="mailto:atendimento@balanet.com.br" class="botao">Enviar mensagem</a> -->
-				<!-- 	</li> -->
-					<!-- <li> -->
-					<!-- 	<img src="./assets/whatsapp.svg" alt="Ícone do WhatsApp"> -->
-					<!-- 	<div> -->
-					<!-- 		<p>WhatsApp</p> -->
-					<!-- 		<p>51 000.000.000</p> -->
-					<!-- 	</div> -->
-					<!-- 	<a href="">Enviar mensagem</a> -->
-					<!-- </li> -->
-					<!-- <li> -->
-					<!-- 	<img src="./assets/telefone.svg" alt="Ícone de telefone"> -->
-					<!-- 	<div> -->
-					<!-- 		<p>Telefone</p> -->
-					<!-- 		<p>51 000.000.000</p> -->
-					<!-- 	</div> -->
-					<!-- 	<a href="">Telefonar</a> -->
-					<!-- </li> -->
-				<!-- </ul> -->
-				
-				<!-- <form method="post"> -->
-					<!-- <h3>Nos envie uma mensagem por email</h3> -->
-<!-- 					<label> -->
-<!-- 						Nome -->
-<!-- 						<input type="text" name="nome"> -->
-<!-- 					</label> -->
-<!--  -->
-<!-- 					<label> -->
-<!-- 						Email -->
-<!-- 						<input type="email" name="email"> -->
-<!-- 					</label> -->
-<!--  -->
-<!-- 					<label id="assunto"> -->
-<!-- 						Assunto -->
-<!-- 						<select name="assunto"> -->
-<!-- 							<option value="outros">Outros</option> -->
-<!-- 						</select> -->
-<!-- 					</label> -->
-<!--  -->
-<!-- 					<label id="mensagem"> -->
-<!-- 						Mensagem -->
-<!-- 						<textarea name="mensagem"></textarea> -->
-<!-- 					</label> -->
-				<!-- </form> -->
-			<!-- </section> -->
-			
-			<!-- <section id="area-cliente"> -->
-			<!-- 	<h2></h2> -->
-			<!-- </section> -->
+			<section id="atendimento">
+				<h2>Entre em contato</h2>
+				<p>Estamos aqui para ajudar você a escolher o melhor plano ou tirar tuas dúvidas.</p>
+				<ul>
+					<li>
+						<img src="./assets/email.svg" alt="Ícone de email">
+						<div id="a">
+							<p>Email:</p>
+							<p>contato@balanet.com.br</p>
+						</div>
+						<a href="mailto:contato@balanet.com.br" class="botao">Enviar mensagem</a>
+					</li>
+					<li>
+						<img src="./assets/whatsapp.svg" alt="Ícone do WhatsApp">
+						<div>
+							<p>WhatsApp</p>
+							<p>51 000.000.000</p>
+						</div>
+						<a href="" class="botao">Enviar mensagem</a>
+					</li>
+					<li>
+						<img src="./assets/telefone.svg" alt="Ícone de telefone">
+						<div>
+							<p>Telefone</p>
+							<p>51 000.000.000</p>
+						</div>
+						<a href="" class="botao">Telefonar</a>
+					</li>
+				</ul>
+
+				<h2>Nos envie uma mensagem por email</h2>
+				<form method="post">
+					<label>
+						Nome
+						<input type="text" name="nome">
+					</label>
+
+					<label>
+						Email
+						<input type="email" name="email">
+					</label>
+
+					<label id="assunto">
+						Assunto
+						<select name="assunto">
+							<option value="outros">Outros</option>
+						</select>
+					</label>
+
+					<label id="mensagem">
+						Mensagem
+						<textarea name="mensagem"></textarea>
+					</label>
+
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
 		</main>
 		
 		<footer>
