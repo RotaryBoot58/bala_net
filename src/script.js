@@ -1,3 +1,20 @@
+const anchors = document.querySelectorAll("nav a");
+
+for(anchor of anchors)
+{
+	anchor.addEventListener("click", (event) => {
+		event.preventDefault();
+
+		sectionName = event.currentTarget.hash.substring(1);
+		section = document.getElementById(sectionName);
+
+		section.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		})
+	});
+}
+
 class Carrossel
 {
 	slides;
