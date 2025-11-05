@@ -1,38 +1,85 @@
-const slides = document.querySelectorAll("#inicio ul li");
-const previousButton = document.getElementById("voltar");
-const nextButton = document.getElementById("avancar");
-
-// Carrossel da seção 'inicio'
-let slideIndex = 0;
-
-function handleSlider(action)
+class Carrossel
 {
-	switch(action.target.id)
-	{
-		case "voltar":
-			slideIndex--
-			break;
+	slides;
+	navButtons;
+	sectionButtons;
 
-		case "avancar":
-			slideIndex++
-			break;
+	constructor(slides, navButtons, sectionButtons)
+	{
+		this.slides = slides;
+		this.navButtons = navButtons;
+		this.sectionButtons = sectionButtons;
+
+		for(let button of navButtons)
+		{
+			button.addEventListener("click", this.rotate.bind(this));
+		}
+
+		for(let button of sectionButtons)
+		{
+			button.addEventListener("click", this.scrollToSection.bind(this));
+		}
 	}
 
-	if(slideIndex > 3)
+	slideIndex = 0;
+	rotate()
 	{
-		slideIndex = 0;
+		switch(event.target.dataset.action)
+		{
+			case "voltar":
+				this.slideIndex--;
+				break;
+
+			case "avancar":
+				this.slideIndex++;
+				break;
+		}
+
+		if(this.slideIndex > 2)
+		{
+			this.slideIndex = 0;
+		}
+		else if(this.slideIndex < 0)
+		{
+			this.slideIndex = 2;
+		}
+
+		this.slides[this.slideIndex].scrollIntoView({
+			behavior: "smooth",
+			block: "nearest"
+		})
 	}
 
-	if(slideIndex < 0)
+	scrollToSection()
 	{
-		slideIndex = 3
+		switch(event.target.dataset.section)
+		{
+			case "planos":
+				document.getElementById(event.target.dataset.section).scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+				break;
+	
+			case "indicacao":
+				document.getElementById(event.target.dataset.section).scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+				break;
+	
+			case "planos-empresariais":
+				document.getElementById(event.target.dataset.section).scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+				break;
+		}
 	}
-
-	slides[slideIndex].scrollIntoView({
-		behavior: "smooth",
-		block: "nearest"
-	});
 }
 
-previousButton.addEventListener("click", handleSlider);
-nextButton.addEventListener("click", handleSlider);
+const carrosel = new Carrossel(
+	document.querySelectorAll("#inicio ul li"),
+	document.querySelectorAll(".botao-navegacao"),
+	document.querySelectorAll(".botao-section")
+);
