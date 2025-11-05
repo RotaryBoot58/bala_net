@@ -11,7 +11,6 @@ main section:not(#inicio)
 	h2
 	{
 		text-align: center;
-		margin-top: 0;
 		margin-bottom: 32px;
 	}
 
@@ -42,7 +41,7 @@ main section:not(#inicio)
 		z-index: -1;
 	}
 
-	button
+	.botao-navegacao
 	{
 		height: 48px;
 		width: 48px;
@@ -78,11 +77,6 @@ main section:not(#inicio)
 				font-size: 1.1em;
 			}
 
-			a
-			{
-				background: green;
-			}
-			
 			img
 			{
 				height: auto;
@@ -95,12 +89,12 @@ main section:not(#inicio)
 
 #planos
 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/bg2.jxl");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/wallpaper/planos.jxl");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-
-	> ul > li
+	
+	.lista-planos > li
 	{
 		width: 384px;
 		padding: 16px;
@@ -132,13 +126,13 @@ main section:not(#inicio)
 
 		ul
 		{
+			margin-top: 1em;
 			margin-left: 16px;
 
 			li
 			{
 				list-style-type: disc;
 				text-align: left;
-				padding: 0;
 			}
 		}
 
@@ -150,6 +144,12 @@ main section:not(#inicio)
 			margin-bottom: 0;
 			width: max-content;
 		}
+	}
+
+	/* hacks */
+	#planos-empresariais
+	{
+		scroll-margin-top: calc(1em + 76px);
 	}
 }
 
@@ -165,15 +165,82 @@ main section:not(#inicio)
 
 #atendimento
 {
-	
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/wallpaper/atendimento.jxl");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	ul li
+	{
+		width: 448px;
+		height: 92px;
+		border: 1px solid green;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		padding: 0 16px;
+		gap: 16px;
+		margin: 24px auto;
+
+		img
+		{
+			height: 60px;
+			width: 60px;
+		}
+
+		div
+		{
+			flex: 1;
+		}
+
+		a
+		{
+			background: green;
+			text-align: center;
+			width: max-content;
+		}
+	}
+
+	form
+	{
+		width: 512px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px 24px;
+		margin: 0 auto;
+		/* border: 1px solid green; */
+
+		input, textarea, select
+		{
+			display: block;
+			width: 100%;
+			background: #f2f2f2;
+			border: unset;
+			min-height: 24px;
+			color: #000000;
+		}
+
+		textarea
+		{
+			resize: vertical;
+			
+		}
+
+		#assunto, #mensagem
+		{
+			grid-column: span 2;
+		}
+
+		button
+		{
+			grid-column: span 2;
+			width: max-content;
+			margin: auto;
+		}
+	}
 }
 
 #perguntas-frequentes
-{
-	
-}
-
-#area-cliente
 {
 	
 }
