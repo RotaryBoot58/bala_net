@@ -25,24 +25,30 @@
 
 @media screen and (min-width: 1024px)
 {
-	header
+	main section:not(#inicio)
+	{
+		padding: 76px 0;
+
+		h2
+		{
+			margin-top: 1em;
+		}
+	}
+	
+	nav
 	{
 		bottom: unset;
 		top: 0px;
+		justify-content: center;
+		column-gap: 24px;
 
-		nav ul
+		a
 		{
-			justify-content: center;
-			gap: 24px;
-			
-			li
+			font-size: 1.1em;
+
+			img
 			{
-				font-size: 1.1em;
-				
-				a img
-				{
-					display: none;
-				}
+				display: none;
 			}
 		}
 	}
