@@ -17,7 +17,7 @@ body
 	margin: unset;
 	background-color: #000000;
 
-	a, p, h1, h2, h3, li, button
+	a, p, h1, h2, h3, li, button, label
 	{
 		color: #f1f1f1;
 	}
@@ -30,6 +30,8 @@ body
 	button
 	{
 		cursor: pointer;
+		background: unset;
+		border: unset;
 	}
 
 	ul
@@ -85,15 +87,16 @@ nav
 	bottom: 0px;
 	user-select: none;
 	z-index: 1;
-
-	ul
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	
+	a
 	{
-		height: 100%;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
+		color: white;
+		display: inline-block;
 
-		li img
+		img
 		{
 			height: 32px;
 			width: 32px;
