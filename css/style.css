@@ -1,3 +1,11 @@
+:root
+{
+	--borda: 1px solid green;
+	--radius: 25px;
+	--cor-borda: green;
+	--cor-botao: green;
+}
+
 *
 {
 	box-sizing: border-box;
@@ -8,45 +16,45 @@ body
 {
 	margin: unset;
 	background-color: #000000;
-}
 
-ul
-{
-	margin: unset;
-	padding: unset;
-	list-style-type: none;
-}
-
-a, p, h1, h2, h3, li, button
-{
-	color: #f1f1f1;
-}
-
-p
-{
-	margin: unset;
-}
-
-img
-{
-	vertical-align: middle;
-}
-
-button
-{
-	cursor: pointer;
-}
-
-a
-{
-	text-decoration-color: #f1f1f100;
-	transition-property: text-decoration-color;
-	transition-duration: 0.3s;
-
-	&:hover
+	a, p, h1, h2, h3, li, button
 	{
-		text-decoration-color: #f1f1f1ff;
+		color: #f1f1f1;
 	}
+
+	p
+	{
+		margin: unset;
+	}
+
+	button
+	{
+		cursor: pointer;
+	}
+
+	ul
+	{
+		margin: unset;
+		padding: unset;
+		list-style-type: none;
+	}
+
+	img
+	{
+		vertical-align: middle;
+	}
+
+	a
+	{
+		text-decoration-color: #f1f1f100;
+		transition-property: text-decoration-color;
+		transition-duration: 0.3s;
+
+		&:hover
+		{
+			text-decoration-color: #f1f1f1ff;
+		}
+	}	
 }
 
 .hashtag
@@ -58,8 +66,14 @@ a
 
 .botao
 {
-	border-radius: 25px;
+	border-radius: var(--radius);
+	border:	var(--borda);
 	padding: 12px;
+
+	&:active
+	{
+		background: var(--cor-botao);
+	}
 }
 
 nav
